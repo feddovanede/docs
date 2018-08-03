@@ -6,21 +6,23 @@ title: "Developer Portal"
 
 ### July 23rd, 2018
 
-#### Improvements
+To enable these features, please redeploy your application.
 
-* We fixed problems with the uploading, downloading, and restoring of backups with very large databases in Cloud V4.
-* We added alerts on database connections and on internal alerting problems.
+#### Fixes
+
+* We fixed problems with the uploading, downloading, and restoring of backups with very large databases in Cloud V4. All these actions are now available for large databases in Cloud V4.
 * We fixed the problem wherein 404, 403, and 503 responses to a REST call translated to an HTML error page.
-* We added Telegraf as a sidecar for monitoring.
+
+#### Improvements
+* We added alerts on database connections and on internal alerting problems. See the [Alerts](https://docs.mendix.com/developerportal/operate/monitoring-application-health) page for more information.
 
 ### July 17th, 2018
 
 #### Improvements
 
-* We improved the deployment speed for the Asia region. The feature is not enabled by default, so you need to request it if necessary.
+* We improved the deployment process by deploying using Amazon S3, instead of deploying to an app directly. The feature is not yet enabled by default, but you can create a ticket to activate this for your app via Mendix Support, if you're experiencing issues with deploying.
 * We implemented tags on environments for metrics in Datadog. It is now possible to add custom tags to metrics that will serve as selection criteria for grouping environments. Environment tags can be created, retrieved, and deleted using APIs. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 * We changed the yearly overview of trends to quarterly in the Cloud Portal for v4 applications.
-* It is now possible for an Operations Manager to reorder environments.
 * Custom offline pages are now immediately active after the transport of a new deployment package.
 
 #### Fixes
