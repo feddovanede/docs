@@ -91,8 +91,9 @@ To view all the available deep link configurations and example URLs, add the **D
   * When the value is left empty, the default location `login.html` in the theme folder is used
   * When the login location ends with `= ` (for example, in the case of Mendix SSO: `https://login.mendix.com/oidp/login?ret=`), the original deep link location will be appended to the login location
   * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO V2.0 and above is required)
-  * When using XSUAA, set the value to `/xsauaalogin/`   
-
+  * When using XSUAA, set the value to `/xsauaalogin/`
+  * When using the [SAML](saml) module, set the value to `/SSO/login?f=true&cont=` to redirect users to the original deep link location after signing in
+    * When using the SAML module with version 6.1.0 of the Deep Link module, you should aslo set the value of the **EnableLeadingSlash** to `false`, to ensure users are redirected to a valid deep link location
 
 * **SSOHandlerLocation** – When a deep link is configured to support anonymous users, the SSO handler is requested before redirecting users to the destination
   * The SSO handler will only be requested when the user session is an anonymous user session (this is useful in situations where the SSO handler does not ask users for authentication to support anonymous users)
